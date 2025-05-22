@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BMSS Radio Player</title>
+	<link rel="icon" href="https://i.postimg.cc/50v1xS91/MK-6.png" type="image/x-icon">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+	<style>
+		
+	</style>
+</head>
+
+<body>
+
+	<div class="radio-player">
+		<div id="temporaryMessage"></div>
+		<div class="metadata">
+			<img src="https://placehold.co/60x60/333/ccc?text=Radio" alt="Station Logo" id="metaStationLogo"
+				onerror="this.onerror=null;this.src='https://placehold.co/60x60/333/ccc?text=Error';this.alt='Logo Error';">
+			<div class="stationMeta">Select a Station</div>
+			<div class="locationMeta">---</div>
+		</div>
+
+		<canvas id="audioVisualizer"></canvas>
+
+		<div class="stations-list">
+			<div class="station" data-url="http://118.179.219.244:8000/;?n=d70ecddb2aebf420177c">
+				<img src="http://www.dhakafm904.com/assets/images/logo.png" alt="Dhaka FM 90.4 Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=DFM';this.alt='DhakaFM Logo Error';">
+				<div class="station-info">
+					<span class="stationName">Dhaka FM 90.4</span>
+					<span class="stationLocation">📍 Bangladesh | বাংলা</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+			<div class="station"
+				data-url="https://stream-156.zeno.fm/be5bqmk1k18uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJiZTVicW1rMWsxOHV2IiwiaG9zdCI6InN0cmVhbS0xNTYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IjB1c0x1ZURGVEhTR0EwSDE1N2VBVmciLCJpYXQiOjE3MzU0NTM5MjQsImV4cCI6MTczNTQ1Mzk4NH0.vjlgqsHzQRt-_2T0LIHscJkAVHXd8hYV8Z6NDvvEWYk">
+				<img src="https://i.postimg.cc/5N7BKtrQ/Radio.png" alt="Radio Bhumi Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=RBH';this.alt='Radio Bhumi Logo Error';">
+				<div class="station-info">
+					<span class="stationName">Radio Bhumi</span>
+					<span class="stationLocation">📍 Bangladesh | বাংলা</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+			<div class="station" data-url="https://audio.streamcast.xyz/listen/radiogoongoon/radio.mp3">
+				<img src="https://i.postimg.cc/5N7BKtrQ/Radio.png" alt="Radio GoonGoon Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=RGG';this.alt='Radio GoonGoon Logo Error';">
+				<div class="station-info">
+					<span class="stationName">Radio GoonGoon</span>
+					<span class="stationLocation">📍 Bangladesh | বাংলা</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+			<div class="station"
+				data-url="https://stream-157.zeno.fm/eabgu655puquv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJlYWJndTY1NXB1cXV2IiwiaG9zdCI6InN0cmVhbS0xNTcuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Ijh6NzR2TE5jUmJLV1pzMExqQWpYcmciLCJpYXQiOjE3Mjc1NDQwMjYsImV4cCI6MTcyNzU0NDA4Nn0.nm5A8Sbpg2aM811icSh5Au4Wigql4rOzRb0eKDW8Hz4">
+				<img src="https://i.postimg.cc/5N7BKtrQ/Radio.png" alt="Radio Shadhin Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=RSH';this.alt='Radio Shadhin Logo Error';">
+				<div class="station-info">
+					<span class="stationName">Radio Shadhin</span>
+					<span class="stationLocation">📍 Bangladesh | বাংলা</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+			<div class="station" data-url="http://stream.zeno.fm/10rt7tpf6ehvv">
+				<img
+					src="https://onlineradiohub.com/wp-content/uploads/2024/02/radio-malda.jpg"
+					alt="NPO Radio 1 Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=NPO';this.alt='NPO Radio 1 Logo Error';">
+				<div class="station-info">
+					<span class="stationName">Radio Malda</span>
+					<span class="stationLocation">📍India | বাংলা</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+			<div class="station" data-url="https://icecast.radiofrance.fr/fip-hifi.aac">
+				<img
+					src="https://onlineradiohub.com/wp-content/uploads/2024/02/balurghat-fm.jpg"
+					alt="NPO Radio 1 Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=NPO';this.alt='NPO Radio 1 Logo Error';">
+				<div class="station-info">
+					<span class="stationName">Balurghat FM</span>
+					<span class="stationLocation">📍 India | বাংলা</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+			<div class="station" data-url="https://stream-153.zeno.fm/xush70b1cbruv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ4dXNoNzBiMWNicnV2IiwiaG9zdCI6InN0cmVhbS0xNTMuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IktzMUIweU9iUm9PdEFWVjVlX1F3ZGciLCJpYXQiOjE3MzgxNDk4MDcsImV4cCI6MTczODE0OTg2N30.3enB3waPQxNQtJtheCrZxm79XrRUySMma-c87DHes2E">
+				<img
+					src="https://pbs.twimg.com/profile_images/1358111873523085312/JyzT_Rad_400x400.jpg"
+					alt="NPO Radio 1 Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=NPO';this.alt='NPO Radio 1 Logo Error';">
+				<div class="station-info">
+					<span class="stationName">Ankora Radio</span>
+					<span class="stationLocation">📍India | বাংলা</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+			<div class="station" data-url="https://stream.radiotreetal.com/listen">
+				<img
+					src="https://onlineradiohub.com/wp-content/uploads/2024/02/hot-now-bangla-fm.jpg"
+					alt="NPO Radio 1 Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=NPO';this.alt='NPO Radio 1 Logo Error';">
+				<div class="station-info">
+					<span class="stationName">Hot Now Bangla</span>
+					<span class="stationLocation">📍India | বাংলা</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+			<div class="station" data-url="https://icecast.omroep.nl/radio1-bb-mp3">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/NPO_Radio_1_logo_2022.svg/200px-NPO_Radio_1_logo_2022.svg.png"
+					alt="NPO Radio 1 Logo" class="station-logo"
+					onerror="this.onerror=null;this.src='https://placehold.co/40x40/383838/ccc?text=NPO';this.alt='NPO Radio 1 Logo Error';">
+				<div class="station-info">
+					<span class="stationName">NPO Radio 1</span>
+					<span class="stationLocation">📍Netherlands</span>
+				</div>
+				<button class="control-btn station-play-btn"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+			</div>
+		</div>
+
+		<div class="controls">
+			<button class="control-btn master-play-btn">
+				<i class="fas fa-play"></i>
+				<i class="fas fa-pause"></i>
+			</button>
+			<div class="volume-controls">
+				<button class="volume-mute-btn">
+					<i class="fas fa-volume-up"></i>
+					<i class="fas fa-volume-mute"></i>
+				</button>
+				<div id="volumeSlider">
+					<div id="volumeFill"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="radioFooter">
+        <p>Made with ❤️ by <a href="https://khandakerhub.github.io" target="_blank" rel="noopener">MK</a></p>
+        <p>all rights reserved &copy; 2025</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
