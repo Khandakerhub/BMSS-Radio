@@ -20,7 +20,7 @@ body {
 
 .radio-player {
     background-color: #3d5342;
-    padding: 20px;
+    padding: 10px;
     border: 2px solid #0a0a0a;
     border-radius: 12px;
     box-shadow: #000000 0px 0px 35px;
@@ -40,12 +40,11 @@ body {
     color: #fff;
     font-weight: 500;
     transition: opacity 0.3s ease-out;
-    /* Added for smooth fade out */
 }
 
 .metadata {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 10px;
     background-color: #0d1d11;
     border-radius: 8px;
@@ -68,8 +67,7 @@ body {
     font-size: 1.4em;
     font-weight: bold;
     color: #4CAF50;
-    /* Green accent */
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .locationMeta {
@@ -89,7 +87,7 @@ body {
 
 .stations-list {
     margin-bottom: 10px;
-    max-height: 380px;
+    max-height: 320px;
     overflow-y: auto;
     padding-right: 10px;
 }
@@ -97,7 +95,7 @@ body {
 .station {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     background-color: #0d1d11;
     border-radius: 8px;
     margin-bottom: 8px;
@@ -148,7 +146,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #0d1d11;
+    background-color: #080808;
     padding: 10px;
     border: 1px solid #649173;
     border-radius: 8px;
@@ -163,7 +161,7 @@ body {
     color: #e0e0e0;
     font-size: 1.6em;
     cursor: pointer;
-    padding: 5px;
+    padding: 4px;
     border-radius: 50%;
     transition: background-color 0.2s, color 0.2s;
 }
