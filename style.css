@@ -25,12 +25,11 @@ body {
     border-radius: 12px;
     box-shadow: #000000 0px 0px 35px;
     width: 100%;
-    max-width: 450px;
+    max-width: 650px;
 }
 
 #temporaryMessage {
     display: none;
-    /* Hidden by default */
     text-align: center;
     margin-bottom: 8px;
     font-size: 0.9em;
@@ -49,30 +48,40 @@ body {
     background-color: #0d1d11;
     border-radius: 8px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
 }
 
+.infoMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
 #metaStationLogo {
-    width: 60px;
-    height: 60px;
+    width: 110px;
+    height: 110px;
     border-radius: 8px;
-    margin-bottom: 5px;
     object-fit: cover;
     border: 1px solid #649173;
     background-color: #555555;
 }
 
 .stationMeta {
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-weight: bold;
     color: #4CAF50;
-    margin-bottom: 5px;
 }
 
 .locationMeta {
-    font-size: 0.9em;
-    color: #aaa;
+    font-size: 1.2em;
+    color: #c6c7c6;
+    margin-left: -5px;
+    margin-top: 5px;
+    font-family: 'Lexend', sans-serif;
 }
 
 #audioVisualizer {
@@ -109,10 +118,10 @@ body {
 }
 
 .station-logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 6px;
-    margin-right: 12px;
+    margin-right: 10px;
     object-fit: cover;
     border: 1px solid #555;
     background-color: #2c2c2c;
@@ -125,27 +134,30 @@ body {
 }
 
 .stationName {
+    font-size: 1.2em;
     font-weight: bold;
     color: #f0f0f0;
 }
 
 .stationLocation {
-    font-family: 'Lexend',sans-serif;
-    font-size: 0.8em;
-    color: #649173;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1em;
+    color: #4CAF50;
+    margin-left: -5px;
+    margin-top: 3px;
 }
 
 .station .control-btn {
     margin-left: auto;
-    font-size: 1.5em;
-    padding: 8px;
+    font-size: 1.4em;
+    padding: 6px;
 }
 
 
 .controls {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-around;
     background-color: #080808;
     padding: 10px;
     border: 1px solid #649173;
@@ -230,6 +242,7 @@ body {
     color: #aaa;
     font-size: 0.8em;
 }
+
 .radioFooter p {
     font-size: 12px;
 }
@@ -240,4 +253,53 @@ body {
     color: #4CAF50;
     text-decoration: none;
     margin-right: 5px;
+}
+
+@media screen and (max-width: 480px) {
+    .radio-player {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .station-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stationName {
+        font-size: 1em;
+    }
+    .stationMeta {
+        font-size: 1.4em;
+    margin-top: 5px;
+}
+.locationMeta {
+        font-size: 1em;
+    }
+
+    .stationLocation {
+        font-size: 0.8em;
+    }
+
+    #metaStationLogo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .metadata {
+        flex-direction: column;
+    }
+
+    .control-btn,
+    .volume-mute-btn {
+        width: 42px;
+        height: 42px;
+        padding: 4px;
+    }
+
+    .volume-controls {
+        width: 50%;
+        justify-content: center;
+    }
+
 }
