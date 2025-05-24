@@ -260,6 +260,11 @@ body {
         width: 100%;
         padding: 5px;
     }
+    .stations-list {
+    margin-bottom: 6px;
+    max-height: 440px;
+    padding-right: 8px;
+}
 
     .station-logo {
         width: 40px;
