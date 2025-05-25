@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const masterBtn = document.querySelector('.master-play-btn');
 	const masterPlayIcon = masterBtn.querySelector('.fa-play');
-	const masterPauseIcon = masterBtn.querySelector('.fa-pause');
+	const masterPauseIcon = masterBtn.querySelector('.fa-stop');
 	const backwardBtn = document.querySelector('.backward-btn'); // New backward button
 	const forwardBtn = document.querySelector('.forward-btn');   // New forward button
 
@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Update the specified station's icons
 		if (stationEl) {
 			const playIcon = stationEl.querySelector('.fa-play');
-			const pauseIcon = stationEl.querySelector('.fa-pause');
+			const pauseIcon = stationEl.querySelector('.fa-stop');
 			if (playIcon && pauseIcon) {
 				playIcon.style.display = isPlaying ? 'none' : 'inline-block';
 				pauseIcon.style.display = isPlaying ? 'inline-block' : 'none';
@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		stationElements.forEach(el => {
 			if (el !== stationEl) { // Don't reset the station we just updated
 				const pI = el.querySelector('.fa-play');
-				const psI = el.querySelector('.fa-pause');
+				const psI = el.querySelector('.fa-stop');
 				if (pI) pI.style.display = 'inline-block';
 				if (psI) psI.style.display = 'none';
 			}

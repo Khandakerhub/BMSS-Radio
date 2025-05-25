@@ -96,7 +96,7 @@ body {
 
 .stations-list {
     margin-bottom: 10px;
-    max-height: 320px;
+    max-height: 334px;
     overflow-y: auto;
     padding-right: 10px;
 }
@@ -153,11 +153,10 @@ body {
     padding: 6px;
 }
 
-
 .controls {
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     background-color: #080808;
     padding: 10px;
     border: 1px solid #649173;
@@ -184,8 +183,8 @@ body {
     color: #fff;
 }
 
-.control-btn .fa-pause,
-.station .fa-pause {
+.control-btn .fa-stop,
+.station .fa-stop {
     display: none;
 }
 
@@ -257,16 +256,15 @@ body {
 
 @media screen and (max-width: 480px) {
     .radio-player {
-        position: absolute;
-        top: 5px;
         width: 100%;
         padding: 5px;
     }
+
     .stations-list {
-    margin-bottom: 6px;
-    max-height: 480px;
-    padding-right: 8px;
-}
+        margin-bottom: 5px;
+        max-height: 460px;
+        padding-right: 8px;
+    }
 
     .station-logo {
         width: 40px;
@@ -276,11 +274,13 @@ body {
     .stationName {
         font-size: 1em;
     }
+
     .stationMeta {
         font-size: 1.4em;
-    margin-top: 5px;
-}
-.locationMeta {
+        margin-top: 5px;
+    }
+
+    .locationMeta {
         font-size: 1em;
     }
 
@@ -308,18 +308,15 @@ body {
         width: 50%;
         justify-content: center;
     }
+
     .controls {
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    background-color: #080808;
-    padding: 10px;
-    border: 1px solid #649173;
-    border-radius: 8px;
-}
-.radioFooter{
-    position:relative;
-    bottom: -320px;
-}
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #080808;
+        padding: 10px;
+        border: 1px solid #649173;
+        border-radius: 8px;
+    }
 
 }
