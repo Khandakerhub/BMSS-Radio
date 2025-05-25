@@ -44,7 +44,7 @@ body {
 .metadata {
     text-align: center;
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 5px;
     background-color: #080808;
     border-radius: 8px;
     display: flex;
@@ -66,10 +66,10 @@ body {
 #metaStationLogo {
     width: 110px;
     height: 110px;
-    border-radius: 8px;
+    border-radius: 6px;
     object-fit: cover;
     border: 1px solid #649173;
-    background-color: #555555;
+    background-color: #969595;
 }
 
 .stationMeta {
@@ -81,7 +81,6 @@ body {
     font-size: 1.2em;
     color: #c6c7c6;
     margin-left: -5px;
-    margin-top: 5px;
     font-family: 'Lexend', sans-serif;
 }
 
@@ -105,7 +104,7 @@ body {
 .station {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 0;
     background-color: #0d1d11;
     border-radius: 8px;
     margin-bottom: 8px;
@@ -120,8 +119,8 @@ body {
 }
 
 .station-logo {
-    width: 50px;
-    height: 50px;
+    width: 54px;
+    height: 54px;
     border-radius: 6px;
     margin-right: 10px;
     object-fit: cover;
@@ -136,6 +135,7 @@ body {
 }
 
 .stationName {
+    margin-top: 4px;
     font-size: 1.2em;
     font-weight: bold;
     color: #f0f0f0;
@@ -146,12 +146,15 @@ body {
     font-size: 1em;
     color: #4CAF50;
     margin-left: -5px;
-    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .station .control-btn {
+    width: 40px;
+    height: 40px;
     margin-left: auto;
-    font-size: 1.4em;
+    margin-right: 5px;
+    font-size: 1.2em;
     padding: 6px;
 }
 
@@ -270,8 +273,8 @@ body {
     }
 
     .station-logo {
-        width: 40px;
-        height: 40px;
+        width: 46px;
+        height: 46px;
     }
 
     .stationName {
@@ -285,6 +288,7 @@ body {
 
     .locationMeta {
         font-size: 1em;
+        margin-bottom: 5px;
     }
 
     .stationLocation {
@@ -307,6 +311,11 @@ body {
         height: 42px;
         padding: 4px;
     }
+    .control-btn:hover,
+.volume-mute-btn:hover {
+    background-color: #0a0a0a;
+    color: #fff;
+}
 
     .volume-controls {
         width: 50%;
