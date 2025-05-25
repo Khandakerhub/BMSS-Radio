@@ -45,12 +45,14 @@ body {
     text-align: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #0d1d11;
+    background-color: #080808;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid #34fc02;
+    box-shadow: 0px 0px 10px #34fc02;
 }
 
 .infoMeta {
@@ -73,9 +75,8 @@ body {
 .stationMeta {
     font-size: 1.8em;
     font-weight: bold;
-    color: #4CAF50;
+    color: #34fc02;
 }
-
 .locationMeta {
     font-size: 1.2em;
     color: #c6c7c6;
@@ -110,6 +111,7 @@ body {
     margin-bottom: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
+    border: 1px solid #366d29;
 }
 
 .station:hover {
@@ -159,8 +161,9 @@ body {
     justify-content: space-around;
     background-color: #080808;
     padding: 10px;
-    border: 1px solid #649173;
+    border: 1px solid #34fc02;
     border-radius: 8px;
+    box-shadow: 0px 0px 10px #34fc02;
 }
 
 .control-btn,
@@ -295,6 +298,7 @@ body {
 
     .metadata {
         flex-direction: column;
+    box-shadow: 0px 0px 5px #34fc02;
     }
 
     .control-btn,
@@ -310,13 +314,7 @@ body {
     }
 
     .controls {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color: #080808;
-        padding: 10px;
-        border: 1px solid #649173;
-        border-radius: 8px;
-    }
+    box-shadow: 0px 0px 5px #34fc02;
+}
 
 }
