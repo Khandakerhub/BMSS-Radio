@@ -257,6 +257,8 @@ body {
 
 @media screen and (max-width: 480px) {
     .radio-player {
+        position: absolute;
+        top: 5px;
         width: 100%;
         padding: 5px;
     }
@@ -306,5 +308,18 @@ body {
         width: 50%;
         justify-content: center;
     }
+    .controls {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #080808;
+    padding: 10px;
+    border: 1px solid #649173;
+    border-radius: 8px;
+}
+.radioFooter{
+    position:relative;
+    bottom: -320px;
+}
 
 }
