@@ -186,7 +186,7 @@ body {
 
 .control-btn:hover,
 .volume-mute-btn:hover {
-    background-color: #4CAF50;
+    background-color: #555;
     color: #fff;
 }
 
@@ -199,6 +199,9 @@ body {
     display: flex;
     align-items: center;
     width: 60%;
+}
+button i.fa-stop{
+color: #34fc02;
 }
 
 #volumeSlider {
@@ -213,7 +216,7 @@ body {
 
 #volumeFill {
     height: 100%;
-    background-color: #4CAF50;
+    background-color: #34fc02;
     border-radius: 5px;
     width: 30%;
 }
@@ -311,6 +314,7 @@ body {
         width: 42px;
         height: 42px;
         padding: 4px;
+        border-radius: 50%;
     }
     .control-btn:hover,
 .volume-mute-btn:hover {
