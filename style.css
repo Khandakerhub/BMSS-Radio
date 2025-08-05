@@ -301,12 +301,12 @@ color: #34fc02;
     }
 
     #metaStationLogo {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
     }
 
     .metadata {
-        flex-direction: column;
+        flex-direction: row;
     box-shadow: 0px 0px 5px #34fc02;
     }
 
